@@ -7,35 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website of Sabina Kazantseva" />
     <title>Sabina Kazantseva portfolio</title>
-    <style>
-        p{
-            font-size: 20 px;
-            font-weight:absolute;
-        }
-    </style>
+<link rel="stylesheet" href="css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=<font-family>&display=swap" rel="stylesheet">
+
 </head>
 
-<body style="background-color: azure;">
-    <p>
-        <stronga>Sabina Kazantseva</stronga>
-    </p>
-    <h1>About</h1>
-    <p>Hello! My name is Sabina, and I am an aspiring web developer with a passion for creating captivating online
-        experiences. While I may not have professional web development experience just yet, I am a dedicated and
-        self-motivated individual eager to learn and grow in this exciting field. I have spent countless hours honing my
-        skills in HTML, CSS, and JavaScript, and I am constantly exploring new technologies and trends in web
-        development. I am driven by a strong desire to bring ideas to life through innovative and visually appealing
-        websites. With a keen eye for design and a meticulous attention to detail, I am committed to delivering
-        user-friendly and engaging digital solutions. I am ready to embark on this journey of becoming a proficient web
-        developer and contribute my unique perspective to the ever-evolving world of web design.</p>
-    <h1 style="color: rgb(52, 136, 169);">Experience</h1>
+<body>
+    <div class="container">
+        <div id="profile-picture">
+            <img src="./images/profile.jpg" alt="Your Name" width="300" height="300">
+        </div>
+        <p>
+            <strong>Sabina Kazantseva</strong>
+        <div id="about-section">
+            <h1>About</h1>
+            <p>Hello! My name is Sabina, and I am an aspiring web developer with a passion for creating captivating online
+                experiences. While I may not have professional web development experience just yet, I am a dedicated and
+                self-motivated individual eager to learn and grow in this exciting field. I have spent countless hours
+                honing my
+                skills in HTML, CSS, and JavaScript, and I am constantly exploring new technologies and trends in web
+                development. I am driven by a strong desire to bring ideas to life through innovative and visually appealing
+                websites. With a keen eye for design and a meticulous attention to detail, I am committed to delivering
+                user-friendly and engaging digital solutions. I am ready to embark on this journey of becoming a proficient
+                web
+                developer and contribute my unique perspective to the ever-evolving world of web design.</p>
+        </div>
+    </div>
+    <h1>Experience</h1>
+    <ul id="Experience"></ul>
     <p>Computer tutor: help students at the local college with coding assignments.
     </p>
     <section id="skills">
-        <h2 style="color: rgb(52, 136, 169);">Skills</h2>
+        <h2>Skills</h2>
         <ul></ul>
     </section>
-    <h1 style="color: rgb(52, 136, 169);"><em>Connect</em></h1>
+    <h1><em>Connect</em></h1>
     <ul>
         <li>Email: <a href="mailto:sabinakazantceva@gmail.com?subject=Hi%20there!">sabinakazantceva@gmail.com</a></li>
         <li>GitHub: https://github.com/Sabina-Kazantseva</li>
@@ -43,7 +49,7 @@
     </ul>
     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" width="300" alt="web development" />
     <section>
-        <h2 style="color: rgb(52, 136, 169);">Leave a Message</h2>
+        <h2>Leave a Message</h2>
         <form name="leave_message">
             <label for="usersName">Name:</label>
             <input type="text" id="usersName" name="usersName" placeholder="Peter Parker" required><br>
