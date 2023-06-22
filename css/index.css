@@ -1,0 +1,50 @@
+body {
+  background-color: azure;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#profile-picture {
+  position: right;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+#about-section {
+  overflow: hidden;
+}
+
+#experience li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for Skills list items */
+#skills li {
+  background-color: #eaeaea;
+  padding: 10px;
+  margin-bottom: 10px;
+}
