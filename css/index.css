@@ -3,6 +3,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+* {
+  font-family: 'Roboto';
+}
+
 h1,
 h2,
 h3,
@@ -11,7 +15,16 @@ h5,
 h6 {
   font-size: 24px;
   font-weight: bold;
-  color: #000000;
+  color: #3488a9;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  width: 100%;
 }
 
 section {
@@ -20,20 +33,35 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
+.top-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
 #profile-picture {
-  position: right;
-  top: 20px;
-  right: 20px;
-  width: 150px;
-  height: 150px;
+  width: 250px;
   border-radius: 50%;
   border: 2px solid #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 100;
 }
 
-#about-section {
-  overflow: hidden;
+.about {
+  width: 50%;
+}
+
+.about-story {
+  line-height: 150%;
+}
+
+.my-name {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.computer-img {
+  width: 300px;
 }
 
 #experience li {
@@ -47,4 +75,78 @@ section {
   background-color: #eaeaea;
   padding: 10px;
   margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.message {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3488a9;
+  padding: 10px;
+
+}
+
+label {
+  color: #010007;
+
+}
+
+input,
+textarea {
+  border: 1px solid #010007;
+  border-radius: 5px;
+  padding: 5px 0 5px 5px;
+  /* top right bottom left */
+}
+
+#usersEmail {
+  width: 165px;
+}
+
+.input-container {
+  margin: 10px 0;
+  /* top/bottom right/left */
+}
+
+.submit-btn {
+  padding: 10px;
+  background: #3488a9;
+  color: white;
+  border: 1px solid #3488a9;
+  border-radius: 5px;
+}
+
+.submitted-message {
+  padding: 10px;
+  color: white;
+  border: 1px solid #3488a9;
+  border-radius: 5px;
+}
+
+.edit-button {
+  padding: 10px;
+  background: #3488a9;
+  color: white;
+  border: 1px solid #3488a9;
+  border-radius: 5px;
+}
+
+.remove-button {
+  padding: 10px;
+  background: red;
+  color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+/* list-style-type: disc; */
+footer {
+  background-color: #eaeaea;
+  padding: 20px;
+  color: #000000;
+}
+
+#skills {
+  list-style-type: disc;
 }
