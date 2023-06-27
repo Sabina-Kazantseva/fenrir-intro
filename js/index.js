@@ -45,7 +45,7 @@ messageForm.addEventListener("submit", function (event) {
   messageLink.innerText = usersName;
   //edit button
   const editButton = document.createElement('button');
-  editButton.classList.add("edit-button");
+  editButton.classList.add("edit-button")
   editButton.innerText = "edit";
   editButton.setAttribute('type', 'button');
   editButton.addEventListener("click", function (event) {
@@ -72,5 +72,3 @@ messageForm.addEventListener("submit", function (event) {
   newMessage.appendChild(removeButton);
   messageForm.reset();
 });
-
-
