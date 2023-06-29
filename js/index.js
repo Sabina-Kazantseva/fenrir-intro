@@ -30,9 +30,10 @@ messageForm.addEventListener("submit", function (event) {
 
   // Display messages in a list
   const messageSection = document.querySelector("#messages");
-  console.log("messageSection ===> ", messageSection);
+  const messageHeader = messageSection.querySelector("h2");
   const messageList = messageSection.querySelector("ul");
   const newMessage = document.createElement(`li`);
+  newMessage.classList.add("submitted-message");
   newMessage.innerHTML =
     `<a href="mailto:{email}">${usersName}</a>
     <span>${usersMessage}</span>
@@ -42,7 +43,9 @@ messageForm.addEventListener("submit", function (event) {
   const messageLink = document.createElement('a');
   messageLink.href = `mailto:${usersEmail}`;
   messageLink.innerText = usersName;
+  //edit button
   const editButton = document.createElement('button');
+  editButton.classList.add("edit-button")
   editButton.innerText = "edit";
   editButton.setAttribute('type', 'button');
   editButton.addEventListener("click", function (event) {
@@ -51,14 +54,18 @@ messageForm.addEventListener("submit", function (event) {
     const messageText = newMessage.querySelector("span");
     messageText.innerText = editedMessage;
   });
-
+  //remove button
   const removeButton = document.createElement('button')
+  removeButton.classList.add("remove-button");
   removeButton.innerText = "remove";
   removeButton.setAttribute('type', 'button');
   removeButton.addEventListener("click", function (event) {
     event.preventDefault();
     const entry = removeButton.parentNode;
     entry.remove();
+    if (messageList.childNodes.length === 0) {
+      messageHeader.style.visibility = "hidden";
+    }
   });
 
   newMessage.appendChild(editButton);
