@@ -1,10 +1,12 @@
 body {
   background-color: azure;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 * {
   font-family: 'Roboto';
+  box-sizing: border-box;
 }
 
 h1,
@@ -33,22 +35,55 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
+}
+
 .top-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
   gap: 2rem;
   width: 100%;
   margin-top: 100px;
 }
 
-#profile-picture {
-  width: 250px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.profile-picture-container {
+  width: 100%;
+  max-width: 414px;
+  display: flex;
+  justify-content: center;
 }
 
-.about {
-  width: 50%;
+.profile-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .about-story {
@@ -69,6 +104,10 @@ section {
   background-color: #f2f2f2;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.experience-item {
+  margin-left: 40px;
 }
 
 /* Style for Skills list items */
@@ -168,11 +207,13 @@ header .nav-menu a {
   color: #3488a9;
 }
 
-
-#experience .experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  /* gap: 20px; */
 }
 
 .experience-item {
@@ -211,4 +252,26 @@ textarea {
   border-radius: 5px;
   align-self: flex-start;
   margin-top: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .top-container {
+    flex-direction: row;
+  }
+
+  .about {
+    width: 50%;
+    padding-top: 30px;
+  }
+
+  .experience {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .experience {
+    width: 90%;
+  }
 }

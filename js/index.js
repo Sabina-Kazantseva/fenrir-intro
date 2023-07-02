@@ -5,6 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 const myName = "Sabina Kazantseva";
 copyright.innerHTML = "\u00A9" + myName + " " + thisYear;
+copyright.style.textAlign = "center";
 footer.appendChild(copyright);
 
 // Add skills to the skills sections
