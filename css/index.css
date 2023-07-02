@@ -37,6 +37,7 @@ section {
   display: flex;
   gap: 2rem;
   width: 100%;
+  margin-top: 100px;
 }
 
 #profile-picture {
@@ -111,14 +112,14 @@ textarea {
 .submit-btn {
   padding: 10px;
   background: #3488a9;
-  color: white;
+  color: rgb(13, 13, 13);
   border: 1px solid #3488a9;
   border-radius: 5px;
 }
 
 .submitted-message {
   padding: 10px;
-  color: white;
+  color: rgb(13, 13, 13);
   border: 1px solid #3488a9;
   border-radius: 5px;
 }
@@ -126,7 +127,7 @@ textarea {
 .edit-button {
   padding: 10px;
   background: #3488a9;
-  color: white;
+  color: rgb(13, 13, 13);
   border: 1px solid #3488a9;
   border-radius: 5px;
 }
@@ -134,7 +135,7 @@ textarea {
 .remove-button {
   padding: 10px;
   background: red;
-  color: white;
+  color: rgb(13, 13, 13);
   border: 1px solid red;
   border-radius: 5px;
   margin-left: 5px;
@@ -149,4 +150,65 @@ footer {
 
 #skills {
   list-style-type: disc;
+}
+
+/* Make the header sticky/fixed on the page */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eaeaeacc;
+  /* Adjust the last value (0.9) to control the transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+header .nav-menu a {
+  color: #3488a9;
+}
+
+
+#experience .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.experience-item {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* message form using grid */
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+label {
+  color: #010007;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  border: 1px solid #010007;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.submit-btn {
+  padding: 10px;
+  background: #3488a9;
+  color: white;
+  border: 1px solid #3488a9;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-top: 10px;
 }
