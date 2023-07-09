@@ -45,18 +45,21 @@ section {
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .nav-menu {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .nav-menu-list {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 0;
   list-style: none;
@@ -98,17 +101,33 @@ section {
 
 .computer-img {
   width: 300px;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+
+.experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  /* gap: 20px; */
+}
+
+.experience-item {
+
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 
 #experience li {
   background-color: #f2f2f2;
-  padding: 10px;
-  margin-bottom: 10px;
+
 }
 
-.experience-item {
-  margin-left: 40px;
-}
+
 
 /* Style for Skills list items */
 #skills li {
@@ -165,7 +184,7 @@ textarea {
 
 .edit-button {
   padding: 10px;
-  background: #3488a9;
+  background: #cef200;
   color: rgb(13, 13, 13);
   border: 1px solid #3488a9;
   border-radius: 5px;
@@ -184,11 +203,45 @@ textarea {
 footer {
   background-color: #eaeaea;
   padding: 20px;
-  color: #000000;
+  color: #3488a9;
 }
 
 #skills {
   list-style-type: disc;
+  /* text-align: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#skills li {
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 10px;
+  margin: 5px;
+}
+
+#skills li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.skills-list li {
+  margin-right: 10px;
 }
 
 /* Make the header sticky/fixed on the page */
@@ -205,20 +258,6 @@ header {
 
 header .nav-menu a {
   color: #3488a9;
-}
-
-.experience {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  /* gap: 20px; */
-}
-
-.experience-item {
-  background-color: #f2f2f2;
-  padding: 10px;
 }
 
 /* message form using grid */
