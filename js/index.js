@@ -48,8 +48,8 @@ for (let i = 0; i < skillItems.length; i++) {
   skillItems[i].style.display = 'flex';
   skillItems[i].style.alignItems = 'center';
   skillItems[i].style.backgroundColor = '#eaeaea';
-  skillItems[i].style.padding = '10px';
-  skillItems[i].style.margin = '0 15px';
+  // skillItems[i].style.padding = '10px';
+  // skillItems[i].style.margin = '0 15px';
   skillItems[i].style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.4)';
   skillItems[i].style.transition = 'box-shadow 0.3s ease-in-out';
 }

@@ -43,10 +43,23 @@ section {
   padding: 5px;
 }
 
+/* NAV BAR */
 .navigation {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/* Make the header sticky/fixed on the page */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eaeaeacc;
+  /* Adjust the last value (0.9) to control the transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
 .nav-menu {
@@ -65,6 +78,12 @@ section {
   list-style: none;
 }
 
+/* link inside .nav-menu-list */
+header .nav-menu a {
+  color: #3488a9;
+}
+
+/* TOP CONTAINER */
 .top-container {
   display: flex;
   flex-direction: column;
@@ -99,15 +118,9 @@ section {
   font-weight: bold;
 }
 
-.computer-img {
-  width: 300px;
-  position: relative;
-  left: 20px;
-  top: 20px;
-}
-
+/* EXPERIENCE */
 .experience {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   /* display: grid; */
@@ -116,66 +129,135 @@ section {
 }
 
 .experience-item {
-
   border-radius: 5px;
   align-self: flex-start;
+}
+
+#experience p {
+  /* background-color: #f2f2f2; */
   margin-top: 10px;
+  padding: 10px;
+  background-color: #eaeaea;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 }
 
-#experience li {
-  background-color: #f2f2f2;
-
+/* SKILLS */
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
 }
 
-
+#skills h2 {
+  width: 100%;
+}
 
 /* Style for Skills list items */
 #skills li {
-  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  /* margin: 5px;
+  margin-bottom: 10px; */
   padding: 10px;
-  margin-bottom: 10px;
+  background-color: #eaeaea;
   list-style-type: disc;
 }
 
-.message {
+#skills li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  list-style-type: none;
+}
+
+/* CONNECT */
+#connect {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#connect li {
+  margin-bottom: 10px;
+}
+
+/* COMPUTER IMAGE */
+.computer-img {
+  display: flex;
+  width: 80%;
+}
+
+.computer-img img {
+  width: 300px;
+  height: auto;
+}
+
+/* FORM */
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.form-header {
   font-size: 24px;
   font-weight: 500;
   color: #3488a9;
   padding: 10px;
+}
 
+.input-container {
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  /* top/bottom right/left */
+  /* margin: 10px;
+  10px for all sides;
+  margin: 10px 5px;
+  10px vertical 5px horizontal;
+  margin: 10px 5px 20px 15px;
+  top right bottom left */
 }
 
 label {
   color: #010007;
-
+  margin-bottom: 5px;
 }
 
 input,
 textarea {
+  width: 100%;
+  padding: 5px;
   border: 1px solid #010007;
   border-radius: 5px;
-  padding: 5px 0 5px 5px;
-  /* top right bottom left */
 }
 
-#usersEmail {
-  width: 165px;
-}
-
-.input-container {
-  margin: 10px 0;
-  /* top/bottom right/left */
-}
-
-.submit-btn {
-  padding: 10px;
-  background: #3488a9;
-  color: rgb(13, 13, 13);
-  border: 1px solid #3488a9;
-  border-radius: 5px;
+#messages {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 .submitted-message {
+  width: 80%;
   padding: 10px;
   color: rgb(13, 13, 13);
   border: 1px solid #3488a9;
@@ -199,88 +281,11 @@ textarea {
   margin-left: 5px;
 }
 
-/* list-style-type: disc; */
-footer {
-  background-color: #eaeaea;
-  padding: 20px;
-  color: #3488a9;
-}
-
-#skills {
-  list-style-type: disc;
-  /* text-align: center; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#skills li {
-  display: flex;
-  align-items: center;
-  background-color: #eaeaea;
-  padding: 10px;
-  margin: 5px;
-}
-
-#skills li img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.skills-list li {
-  margin-right: 10px;
-}
-
-/* Make the header sticky/fixed on the page */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #eaeaeacc;
-  /* Adjust the last value (0.9) to control the transparency */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-
-header .nav-menu a {
-  color: #3488a9;
-}
-
 /* message form using grid */
 .message-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.input-container {
-  margin-bottom: 10px;
-}
-
-label {
-  color: #010007;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
-  border: 1px solid #010007;
-  border-radius: 5px;
-  padding: 5px;
 }
 
 .submit-btn {
@@ -293,6 +298,11 @@ textarea {
   margin-top: 10px;
 }
 
+footer {
+  background-color: #eaeaea;
+  padding: 20px;
+  color: #3488a9;
+}
 
 @media screen and (min-width: 768px) {
   .top-container {
@@ -304,13 +314,25 @@ textarea {
     padding-top: 30px;
   }
 
-  .experience {
+  #experience {
     width: 80%;
+  }
+
+  #skills {
+    width: 80%;
+  }
+
+  .skills-list {
+    flex-direction: row;
+  }
+
+  .input-container {
+    max-width: 300px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .experience {
-    width: 90%;
+  .computer-img img {
+    width: 450px;
   }
 }
