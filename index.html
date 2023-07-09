@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -20,11 +19,11 @@
         <header class="navigation">
             <nav class="nav-menu">
                 <ul class="nav-menu-list">
-                    <li class="nav-menu-list-item"><a class="nav-menu-list-link" href="#about">About</a></li>
-                    <li class="nav-menu-list-item"><a class="nav-menu-list-link" href="#experience">Experience</a></li>
-                    <li class="nav-menu-list-item"><a class="nav-menu-list-link" href="#skills">Skills</a></li>
-                    <li class="nav-menu-list-item"><a class="nav-menu-list-link" href="#connect">Connect</a></li>
-                    <li class="nav-menu-list-item"><a class="nav-menu-list-link" href="#messages">Messages</a></li>
+                    <li class="nav-menu-list-item"><a href="#about">About</a></li>
+                    <li class="nav-menu-list-item"><a href="#experience">Experience</a></li>
+                    <li class="nav-menu-list-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-menu-list-item"><a href="#connect">Connect</a></li>
+                    <li class="nav-menu-list-item"><a href="#messages">Messages</a></li>
                 </ul>
             </nav>
         </header>
@@ -61,54 +60,56 @@
                 </div>
             </div>
         </section>
-        <div id="experience" class="experience">
+        <section id="experience">
             <h1>Experience</h1>
             <div class="experience-item">
-                <ul id="Experience"></ul>
-                <p>Computer tutor: help students at the local college with coding assignments.
-
-                </p>
+                <!-- <ul id="Experience"></ul> -->
+                <p>Preschool teacher: teaching 2-3 years old kids.</p>
+                <p>Computer tutor: helping students at the local college with coding assignments.</p>
             </div>
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul></ul>
-            </section>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul id="skills-list"></ul>
+        </section>
+        <section id="connect">
             <h1 id="connect"><em>Connect</em></h1>
             <ul>
                 <li>Email: <a
                         href="mailto:sabinakazantceva@gmail.com?subject=Hi%20there!">sabinakazantceva@gmail.com</a>
                 </li>
-                <li>GitHub: https://github.com/Sabina-Kazantseva</li>
-                <li>LinkedIn:</li>
+                <li>GitHub: <a href="https://github.com/Sabina-Kazantseva">https://github.com/Sabina-Kazantseva</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sabina-kazantseva
+                    ">LinkedIn Profile</a></li>
             </ul>
-            <div class="computer-img">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" width="300"
-                    alt="laptop with a quote on the screen" />
-            </div>
-            <section>
-                <h2 class="message">Leave a Message</h2>
-                <form name="leave_message" class="message-form">
-                    <div class="input-container">
-                        <label for="usersName">Name:</label>
-                        <input type="text" id="usersName" name="usersName" placeholder="Peter Parker" required>
-                    </div>
-                    <div class="input-container">
-                        <label for="usersEmail">Email:</label>
-                        <input type="email" id="usersEmail" name="usersEmail" placeholder="peterparker@gmail.com"
-                            required>
-                    </div>
-                    <div class="input-container">
-                        <label for="usersMessage">Message:</label>
-                        <textarea id="usersMessage" name="usersMessage" placeholder="Hi, I'm Peter." value="123"
-                            required></textarea><br>
-                    </div>
-                    <button class="submit-btn" type="submit">Submit</button>
-                </form>
-            </section>
-            <section id="messages">
-                <h2>Messages</h2>
-                <ul></ul>
-            </section>
+        </section>
+        <section class="computer-img">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" width="300"
+                alt="laptop with a quote on the screen" />
+        </section>
+        <section id="form">
+            <h2 class="form-header">Leave a Message</h2>
+            <form name="leave_message" class="message-form">
+                <div class="input-container">
+                    <label for="usersName">Name:</label>
+                    <input type="text" id="usersName" name="usersName" placeholder="Peter Parker" required>
+                </div>
+                <div class="input-container">
+                    <label for="usersEmail">Email:</label>
+                    <input type="email" id="usersEmail" name="usersEmail" placeholder="peterparker@gmail.com" required>
+                </div>
+                <div class="input-container">
+                    <label for="usersMessage">Message:</label>
+                    <textarea id="usersMessage" name="usersMessage" placeholder="Hi, I'm Peter." value="123"
+                        required></textarea><br>
+                </div>
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
     </main>
     <footer></footer>
     <script src="js/index.js"></script>
