@@ -123,3 +123,13 @@ messageForm.addEventListener("submit", function (event) {
   newMessage.appendChild(removeButton);
   messageForm.reset();
 });
+
+// AJAX
+githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/Sabina-Kazantseva/repos")
+githubRequest.addEventListener("load", () => {
+  let repositories = JSON.parse(githubRequest.response);
+  console.log("repositories ===> ", repositories);
+});
+
+githubRequest.send()
