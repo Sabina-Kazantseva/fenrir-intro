@@ -304,6 +304,23 @@ footer {
   color: #3488a9;
 }
 
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+.social-media-links a {
+  color: #366d89;
+  font-size: 24px;
+}
+
+.social-media-links a:hover {
+  color: #324148;
+}
+
 @media screen and (min-width: 768px) {
   .top-container {
     flex-direction: row;
