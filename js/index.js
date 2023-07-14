@@ -51,7 +51,7 @@ for (let i = 0; i < skillItems.length; i++) {
   // skillItems[i].style.padding = '10px';
   // skillItems[i].style.margin = '0 15px';
   skillItems[i].style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.4)';
-  skillItems[i].style.transition = 'box-shadow 0.3s ease-in-out';
+  skillItems[i].style.transition = 'box-shadow 0.1s ease-in-out';
 }
 
 // Hover effect for skill items
@@ -65,7 +65,7 @@ skillsSection.addEventListener('mouseover', function (event) {
 skillsSection.addEventListener('mouseout', function (event) {
   const target = event.target;
   if (target.matches('li')) {
-    target.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 2px 4px';
+    target.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 2px 8px';
   }
 });
 // Handle message form submit
