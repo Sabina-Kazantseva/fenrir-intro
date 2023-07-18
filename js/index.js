@@ -128,8 +128,30 @@ messageForm.addEventListener("submit", function (event) {
 githubRequest = new XMLHttpRequest();
 githubRequest.open("GET", "https://api.github.com/users/Sabina-Kazantseva/repos")
 githubRequest.addEventListener("load", () => {
-  let repositories = JSON.parse(githubRequest.response);
-  console.log("repositories ===> ", repositories);
+  if (githubRequest.status >= 200 && githubRequest.status < 400) {
+    const repositories = JSON.parse(githubRequest.response);
+    console.log("repositories ===> ", repositories);
+
+    // Select the #projects section by id and store it in a variable named projectSection
+    const projectSection = document.querySelector("#projects");
+
+
+    const projectList = projectSection.querySelector("ul");
+
+    // Create a for loop to iterate over your repositories Array, starting at index 0
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+
+      // Set the inner text of your project variable to the current Array element's name property
+      project.innerText = repositories[i].name;
+
+      // Append the project element to the projectList element
+      projectList.appendChild(project);
+    }
+  } else {
+    console.error("Error fetching repositories:", githubRequest.status, githubRequest.statusText);
+  }
 });
 
-githubRequest.send()
+githubRequest.send();
+
