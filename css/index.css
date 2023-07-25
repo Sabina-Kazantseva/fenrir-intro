@@ -204,8 +204,45 @@ header .nav-menu a {
 }
 
 #projects ul {
+  display: flex;
+  gap: 15px;
   margin-bottom: 10px;
 }
+
+.list-item {
+  list-style: none;
+}
+
+.list-link {
+  color: black;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  border-radius: 6px;
+  background-size: contain;
+}
+
+.card__text-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffffbd;
+}
+
+.card__text {
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}
+
 
 /* CONNECT */
 #connect {

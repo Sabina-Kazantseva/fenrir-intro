@@ -16,6 +16,11 @@ const skills = [
   { name: 'GitHub', icon: 'icons/github-icon.png' }
 ];
 
+const images = [
+  { path: "../images/puzzle.jpg" },
+  { path: "../images/javascript-game-with-console.jpg" },
+]
+
 // Append skills to the skills section
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
@@ -184,9 +189,31 @@ fetch(apiUrl, options)
     // Create a for loop to iterate over your repositories Array, starting at index 0
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
+      project.classList.add("list-item");
+
+      const projectLink = document.createElement("a");
+      projectLink.classList.add("list-link");
+      projectLink.href = repositories[i].html_url;
+      projectLink.target = "_blank";
+      projectLink.rel = "noopener noreferrer";
+      project.appendChild(projectLink);
+
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.backgroundImage = `url(${images[i].path})`;
+      projectLink.appendChild(card);
+
+      const cardTextContainer = document.createElement("div");
+      cardTextContainer.classList.add("card__text-container");
+      card.appendChild(cardTextContainer);
+
+      const cardText = document.createElement("p");
+      cardText.classList.add("card__text");
+      cardTextContainer.appendChild(cardText);
+      cardText.innerText = repositories[i].name;
 
       // Set the inner text of your project variable to the current Array element's name property
-      project.innerText = repositories[i].name;
+      // project.innerText = repositories[i].name;
 
       // Append the project element to the projectList element
       projectList.appendChild(project);
