@@ -205,7 +205,8 @@ header .nav-menu a {
 
 #projects ul {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  gap: 25px;
   margin-bottom: 10px;
 }
 
@@ -223,6 +224,7 @@ header .nav-menu a {
   height: 150px;
   border-radius: 6px;
   background-size: contain;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .card__text-container {
@@ -395,6 +397,10 @@ footer {
 
   #skills {
     width: 80%;
+  }
+
+  #projects ul {
+    flex-direction: row;
   }
 
   .skills-list {
