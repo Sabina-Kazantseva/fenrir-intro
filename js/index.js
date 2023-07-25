@@ -160,6 +160,7 @@ const options = {
 }
 
 const apiUrl = "https://api.github.com/users/Sabina-Kazantseva/repos";
+
 fetch(apiUrl, options)
   .then(response => {
     console.log(response);
@@ -193,6 +194,12 @@ fetch(apiUrl, options)
   })
   .catch((error) => {
     console.error('Fetch Error:', error);
+    const projectSection = document.querySelector("#projects");
+    const errorMessageDisplay = "Oh oh, something went wrong! You can use <a style=\"color: red\" href='https://github.com/Sabina-Kazantseva?tab=repositories'>this link</a> for now";
+    const errorElement = document.createElement("p");
+    errorElement.style.color = "red";
+    errorElement.innerHTML = errorMessageDisplay;
+    projectSection.appendChild(errorElement);
   });
 console.log(projects);
 
