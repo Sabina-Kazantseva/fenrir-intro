@@ -282,6 +282,13 @@ header .nav-menu a {
   padding: 10px;
 }
 
+.message-form__inner {
+  display: flex;
+  width: 400px;
+  gap: 8px;
+  flex-direction: column;
+}
+
 .input-container {
   width: 100%;
   max-width: 180px;
@@ -308,6 +315,10 @@ textarea {
   padding: 5px;
   border: 1px solid #010007;
   border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
 }
 
 #messages {
@@ -407,8 +418,16 @@ footer {
     flex-direction: row;
   }
 
+  .message-form__inner {
+    flex-direction: row;
+  }
+
   .input-container {
     max-width: 300px;
+  }
+
+  textarea {
+    width: 400px;
   }
 }
 
